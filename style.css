@@ -1,0 +1,303 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #111;
+
+    color: white;
+}
+
+
+/* TITLE */
+
+h1 {
+    margin: 15px;
+
+    font-size: 32px;
+}
+
+
+/* START SCREEN */
+
+#startScreen {
+
+    width: 420px;
+
+    margin: 20px auto;
+
+    padding: 25px;
+
+    background-color: #222;
+
+    border-radius: 15px;
+}
+
+
+#startScreen h2 {
+
+    font-size: 28px;
+
+}
+
+
+/* GAME INFORMATION */
+
+#gameInfo {
+
+    width: 420px;
+
+    margin: auto;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+#score {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+#level {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+/* BUTTON */
+
+button {
+
+    padding: 10px 20px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.05);
+
+    background-color: yellow;
+
+}
+
+
+/* GAME */
+
+#game {
+
+    width: 420px;
+
+    height: 600px;
+
+    margin: auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #444;
+
+    border-left: 10px solid white;
+
+    border-right: 10px solid white;
+
+}
+
+
+/* ROAD */
+
+.road {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background-color: #444;
+
+    left: 0;
+
+    top: 0;
+
+}
+
+
+/* ROAD LINES */
+
+.roadLine {
+
+    position: absolute;
+
+    width: 10px;
+
+    height: 100px;
+
+    background-color: white;
+
+    left: 200px;
+
+    z-index: 1;
+}
+
+
+/* Different line positions */
+
+.roadLine:nth-child(2) {
+    top: 0;
+}
+
+.roadLine:nth-child(3) {
+    top: 120px;
+}
+
+.roadLine:nth-child(4) {
+    top: 240px;
+}
+
+.roadLine:nth-child(5) {
+    top: 360px;
+}
+
+.roadLine:nth-child(6) {
+    top: 480px;
+}
+
+.roadLine:nth-child(7) {
+    top: 600px;
+}
+
+
+/* PLAYER CAR */
+
+#player {
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 80px;
+
+    left: 180px;
+
+    bottom: 25px;
+
+    font-size: 50px;
+
+    z-index: 10;
+
+    user-select: none;
+
+}
+
+
+/* ENEMY CARS */
+
+.enemy {
+
+    position: absolute;
+
+    width: 60px;
+
+    height: 80px;
+
+    top: -100px;
+
+    font-size: 50px;
+
+    z-index: 5;
+
+    user-select: none;
+
+}
+
+
+.enemy1 {
+    left: 50px;
+}
+
+
+.enemy2 {
+    left: 180px;
+}
+
+
+.enemy3 {
+    left: 310px;
+}
+
+
+/* GAME OVER */
+
+#gameOver {
+
+    display: none;
+
+    width: 420px;
+
+    margin: 20px auto;
+
+    padding: 25px;
+
+    background-color: #222;
+
+    border-radius: 15px;
+
+}
+
+
+#gameOver h2 {
+
+    color: red;
+
+    font-size: 32px;
+
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 500px) {
+
+    #game,
+    #gameInfo,
+    #startScreen,
+    #gameOver {
+
+        width: 90%;
+
+    }
+
+}
